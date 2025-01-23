@@ -34,7 +34,7 @@ import ActivityKit
         }
     }
     
-    private func updateActivity() {
+    func updateActivity() {
         guard let activity = currentActivity else {
             return
         }

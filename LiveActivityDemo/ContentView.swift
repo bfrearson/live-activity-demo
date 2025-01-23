@@ -21,6 +21,9 @@ struct ContentView: View {
             Toggle("Play/Pause", isOn: $activityManager.isPlaying)
         }
         .padding()
+        .onChange(of: activityManager.isPlaying) { oldValue, newValue in
+            activityManager.updateActivity()
+        }
     }
 }
 
