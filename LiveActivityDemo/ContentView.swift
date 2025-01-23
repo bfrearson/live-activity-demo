@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var activityManager = PlayPauseActivityManager.shared
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if activityManager.currentActivity == nil {
+                Button("start live activity", action: activityManager.startActivity)
+            } else {
+                Button("Stop live activity", action: activityManager.stopActivity)
+            }
+            
+            Toggle("Play/Pause", isOn: $activityManager.isPlaying)
         }
         .padding()
     }
