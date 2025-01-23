@@ -56,7 +56,6 @@
 			membershipExceptions = (
 				AppIntent.swift,
 				PlayPauseActivity.swift,
-				PlayPauseActivityManager.swift,
 			);
 			target = 418445782D42469D005350FE /* LiveActivityExtension */;
 		};
